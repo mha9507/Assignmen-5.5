@@ -890,235 +890,176 @@ html, body {
 
 
 
-
 /* ===== COMPLETE MOBILE CSS (PHONES) ===== */
 @media (max-width: 768px) {
-  /* 1. MAIN MENU STRUCTURE */
+  /* 1. LARGER MENU BUTTONS */
+  #pixel-menu {
+    height: 90px; /* Slightly taller menu bar */
+    padding: 0 10px; /* Adjusted padding */
+  }
+  
+  #pixel-menu img {
+    height: 85px !important; /* Bigger buttons */
+    width: auto;
+    image-rendering: pixelated;
+    margin: 0 -8px; /* Allow slight overlap */
+    transition: transform 0.2s;
+  }
+
+  #pixel-menu img:hover {
+    transform: scale(1.1);
+  }
+
+  /* 2. MAIN MENU ADJUSTMENTS */
   #main-menu {
-    padding-top: 120px; /* Increased top padding */
-    gap: 15px;
-    justify-content: flex-start;
-    overflow-y: auto;
+    padding-top: 90px;
+    gap: 20px;
   }
 
-  /* 2. INSTRUCTIONS BOX - PRIMARY FIX */
-  #instructions {
-    width: 90%;
-    min-height: auto;
-    padding: 20px 15px;
-    margin: 0 auto 20px auto;
-    font-size: 13px;
-    line-height: 1.5;
-    overflow: visible;
-    box-sizing: border-box;
-  }
-
+  /* Loading text adjustments */
   #instructions h1 {
-    font-size: 1.2rem !important;
-    margin: 0 0 15px 0 !important;
-    white-space: normal;
-    word-break: break-word;
+    font-size: 1.1rem !important;
+    margin: 0 0 18px 0 !important;
+    line-height: 1.3;
+    padding: 0 5px;
   }
 
-  #instructions ul {
-    padding-left: 5px;
-    margin: 0;
+  /* Instructions box sizing */
+  #instructions {
+    width: 92%;
+    min-height: 270px;
+    padding: 20px 15px;
+    margin: 30px auto 20px auto;
+    font-size: 14px;
   }
 
   #instructions ul li {
     margin-bottom: 10px;
-    font-size: 12px;
-    white-space: normal;
-    display: block;
-    text-align: left;
-    line-height: 1.6;
+    font-size: 13px;
   }
 
-  #instructions ul li strong {
-    display: inline;
-    margin-right: 4px;
-  }
-
-  .instruction-icon {
-    width: 28px;
-    height: 28px;
-    margin: 0 4px;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .fly-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  /* 3. GAME ELEMENTS POSITIONING */
+  /* Game elements */
   #runner, #main-menu-blur-runner {
-    width: 160px;
-    bottom: 15vh;
+    width: 170px;
+    bottom: 22vh;
     left: 20px;
   }
 
   #coin, #bomb { 
-    width: 35px;
-    height: 35px; 
+    width: 40px;
+    height: 40px; 
   }
   
   #fly { 
-    width: 50px;
-    height: 50px; 
+    width: 60px;
+    height: 60px; 
   }
 
-  /* 4. START BUTTON */
-  #start-btn {
-    margin-top: 10px;
-    margin-bottom: 20px;
+  /* 3. ABOUT ME PAGE ADJUSTMENTS */
+  #about-me-container {
+    max-height: 78vh !important;
+    padding: 18px !important;
+    overflow-y: auto;
   }
 
-  #start-btn img {
-    width: 220px;
-  }
-
-  /* 5. MENU BAR ADJUSTMENTS */
-  #pixel-menu {
-    height: 80px;
-    padding: 0 15px;
-    gap: 15px;
-    top: 10px;
-  }
-  
-  #pixel-menu img {
-    height: 70px !important;
-    margin: 0;
-  }
-
-  /* 6. SCORE DISPLAY */
-  #score {
-    font-size: 16px;
-    top: 15px;
-    right: 15px;
-  }
-
-  /* 7. NAME DISPLAY */
-  #name-display {
-    font-size: 16px;
-    top: 15px;
-    left: 15px;
-  }
-
-  /* 8. GAME OVER OVERLAY */
-  #game-over-overlay {
-    font-size: 28px;
-  }
-
-  #restart-btn img {
-    width: 220px;
-  }
-}
-
-/* ===== SMALL PHONES (<= 480px) ===== */
-@media (max-width: 480px) {
-  /* 1. MAIN MENU STRUCTURE */
-  #main-menu {
-    padding-top: 110px;
-  }
-
-  /* 2. INSTRUCTIONS BOX */
-  #instructions {
-    padding: 15px 12px;
-    font-size: 12px;
-  }
-
-  #instructions h1 {
+  #about-me-container h1 {
     font-size: 1.1rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  #about-me-container h2 {
+    font-size: 0.95rem !important;
     margin-bottom: 12px !important;
   }
 
-  #instructions ul li {
-    font-size: 11px;
-    line-height: 1.7;
-    margin-bottom: 8px;
+  .info-item {
+    font-size: 0.8rem !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4;
   }
 
-  .instruction-icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .fly-icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  /* 3. GAME ELEMENTS */
-  #runner, #main-menu-blur-runner {
-    width: 140px;
-    bottom: 12vh;
-  }
-
-  /* 4. START BUTTON */
-  #start-btn img {
-    width: 200px;
-  }
-
-  /* 5. MENU BAR */
-  #pixel-menu {
+  .coding-languages {
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 0 10px;
-  }
-  
-  #pixel-menu img {
-    height: 60px !important;
+    margin-top: 15px;
   }
 
-  /* 6. GAME OVER OVERLAY */
-  #restart-btn img {
-    width: 180px;
+  .language-item {
+    font-size: 0.75rem !important;
+  }
+
+  .language-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* Mobile runner adjustments */
+  #mobile-runner-container {
+    margin: 15px 0;
+  }
+
+  #about-me-runner-mobile {
+    width: 140px;
+    margin: 8px auto;
+  }
+
+  /* Hide desktop elements */
+  #name-display, 
+  .prominent-name,
+  #about-me-runner {
+    display: none !important;
   }
 }
 
-/* ===== EXTRA SMALL PHONES (<= 380px) ===== */
+/* ===== SMALL PHONES (<= 380px) ===== */
 @media (max-width: 380px) {
-  /* 1. INSTRUCTIONS BOX */
+  /* Even more compact layout */
+  #pixel-menu img {
+    height: 75px !important;
+  }
+
   #instructions {
-    padding: 12px 10px;
-    font-size: 11px;
+    min-height: 250px;
+    padding: 18px 12px;
+    font-size: 13px;
   }
 
   #instructions h1 {
     font-size: 1rem !important;
   }
 
-  #instructions ul li {
-    font-size: 10px;
+  /* About me page ultra-compact */
+  #about-me-container {
+    max-height: 82vh !important;
+    padding: 15px 12px !important;
   }
 
-  .instruction-icon {
-    width: 22px;
-    height: 22px;
+  .info-item {
+    font-size: 0.75rem !important;
   }
 
-  /* 2. MENU BAR */
-  #pixel-menu {
-    gap: 8px;
-  }
-  
-  #pixel-menu img {
-    height: 55px !important;
+  .coding-languages {
+    grid-template-columns: 1fr !important;
   }
 
-  /* 3. START BUTTON */
-  #start-btn img {
-    width: 180px;
+  /* Smaller game elements */
+  #runner, #main-menu-blur-runner {
+    width: 150px;
+    bottom: 18vh;
   }
 }
 
-/* ===== TOUCH DEVICE ADJUSTMENTS ===== */
-@media (hover: none) {
+/* ===== GLOBAL MOBILE OVERRIDES ===== */
+@media (max-width: 768px) {
   /* Disable hover effects on touch devices */
-  #pixel-menu img:hover,
-  #start-btn img:hover,
-  .instruction-icon:hover {
-    transform: none !important;
+  @media (hover: none) {
+    #pixel-menu img:hover {
+      transform: none !important;
+    }
+  }
+
+  /* Prevent zooming on input */
+  input, select, textarea {
+    font-size: 16px !important;
   }
 }
